@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title -->
+        <title>Lab 3 | Smart Grocers</title>
+
+        <!-- Meta data -->
+        <meta name="author" content="Jake Bisson"/>
+        <meta name="description" content="Jake Bisson's website containing his assignments and labs for the SEG3125 course."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/universal-page-style.css"/>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <!-- Icons -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div class="page-container">
+            <a href="../../index.html" style="color: dodgerblue; font-size: 18px; font-family: Roboto; text-decoration: none;">Back to home page</a>
+            <!-- company name -->
+            <h1 class="company-name">Smart <span class="green-text">Grocers</span></h1>
+            <!-- breadcrumbs inspired by code from: https://www.w3schools.com/howto/howto_css_breadcrumbs.asp-->
+            <ul class="breadcrumb-list">
+                <li id="customer-breadcrumb" class="breadcrumb-item breadcrumb-active"><button type="button" class="breadcrumb-button" onclick="openTab('customer-breadcrumb', 'client')">Your Preferences</button></li>
+                <li class="breadcrumb-item">></li>
+                <li id="product-breadcrumb" class="breadcrumb-item"><button type="button" class="breadcrumb-button" onclick="openTab('product-breadcrumb', 'products') ; populateProductChoices('vegetarian-checkbox', 'glutenfree-checkbox', 'lactosefree-checkbox', 'organic-checkbox')">Product Selection</button></li>
+                <li class="breadcrumb-item">></li>
+                <li id="cart-breadcrumb" class="breadcrumb-item"><button type="button" class="breadcrumb-button" onclick="openTab('cart-breadcrumb', 'cart')">Cart</button><span id="cart-size">0</span></li> 
+            </ul> 
+            <!-- Tab content -->
+            <div id="client" class="tab-content" style="display: block;">
+                <h3 class="tab-title"><span class="green-text">Your Preferences</span></h3>
+                <hr/>
+                <p class="tab-description">Select your preferences so we can provide the best selection of products for <span class="green-text">YOU</span></p>
+                <div class="preference-checkboxes-container">
+                    <input type="checkbox" class="preference-checkbox" id="vegetarian-checkbox" name="isVegetarian">
+                    <label for="vegetarian-checkbox" class="preference-label">Vegetarian</label>
+                    <br/>
+                    <input type="checkbox" class="preference-checkbox" id="glutenfree-checkbox" name="isGlutenFree">
+                    <label for="glutenfree-checkbox" class="preference-label">Gluten Free</label>
+                    <br/>
+                    <input type="checkbox" class="preference-checkbox" id="lactosefree-checkbox" name="isLactoseFree">
+                    <label for="lactosefree-checkbox" class="preference-label">Lactose Free</label>
+                    <br/>
+                    <input type="checkbox" class="preference-checkbox" id="organic-checkbox" name="isOrganic"/>
+                    <label for="organic-checkbox" class="preference-label">Organic only</label>
+                </div>
+                <!-- button to continue to the next section -->
+                <button type="button" class="next-section-button" onclick="openTab('product-breadcrumb', 'products') ; populateProductChoices('vegetarian-checkbox', 'glutenfree-checkbox', 'lactosefree-checkbox', 'organic-checkbox')">Continue to products</button>
+            </div>
+            <div id="products" class="tab-content" style="display: none;">
+                <h3 class="tab-title"><span class="green-text">Product Selection</span></h3>
+                <hr/>
+                <br/>
+                <!-- dropdown to filter selections -->
+                <div class="controls">
+                    <span style="color: white; font-size: 20px; font-family: Roboto;">Filter:</span>
+                    <select id="select-category" name="selectCategory" onchange="openFilter(this.id)">
+                        <option value="product-display-produce">Fruits & Vegetables</option>
+                        <option value="product-display-grain">Breads and grains</option>
+                        <option value="product-display-protein">Protein</option>
+                        <option value="product-display-dairy">Dairy</option>   
+                    </select><br/><br/>
+                </div>
+                <!-- where product elements appear -->
+                <div class="product-display" id="product-display-produce"></div>
+                <div class="product-display" id="product-display-grain" style="display: none;"></div>
+                <div class="product-display" id="product-display-protein" style="display: none;"></div>
+                <div class="product-display" id="product-display-dairy" style="display: none;"></div>
+                <br/><br/>
+                <!-- Add cart button -->
+                <button class="add-cart-button" type="button" onclick="selectedItems(); updateCartSize()">Add to cart</button><br/><br/>
+                <button type="button" class="previous-section-button" onclick="openTab('customer-breadcrumb', 'client')">Back to Preferences</button>
+                <button type="button" class="next-section-button" onclick="openTab('cart-breadcrumb', 'cart')">Continue to Cart</button>
+            </div>
+            <div id="cart" class="tab-content" style="display: none;">
+                <h3 class="tab-title">Your Cart</h3>
+                <div id="cart-display"></div>
+                <button type="button" class="previous-section-button" onclick="openTab('product-breadcrumb', 'products') ; populateProductChoices('vegetarian-checkbox', 'glutenfree-checkbox', 'lactosefree-checkbox', 'organic-checkbox')">Back to products</button>
+            </div>
+        </div>
+        <footer>
+            Website created by: Jake Bisson
+        </footer>
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="js/groceries.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

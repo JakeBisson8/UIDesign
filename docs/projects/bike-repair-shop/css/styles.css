@@ -1,0 +1,24 @@
+.background-main {
+    background-image: url("../images/bike-main.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 90px);
+}
+
+.title-name {
+    font-size: 56px;
+}
+
+.title-slogan {
+    font-size: 28px;
+}
+
+.title-container {
+    background-color: rgba(256,256,256,0.6);
+    padding: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

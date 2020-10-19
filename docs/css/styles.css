@@ -1,0 +1,60 @@
+::selection {
+    background-color: #b388ff;
+}
+
+#navigation, #navigation-title{
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.title-paragraph {
+    font-size: 18px;
+}
+
+.description-paragraph {
+    font-size: 16px;
+}
+
+.technology-paragraph {
+    font-size: 14px;
+}
+
+.anton-font {
+    font-family: "Anton";
+}
+
+.roboto-font {
+    font-family: "Roboto";
+}
+
+.svg-img {
+    width: 100%; 
+    height: 30%;
+}
+
+.footer {
+    padding: 20px 0 20px 0; 
+    margin-top: 50px;
+}
+
+.activity-card {
+    border-radius: 20px;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.list-inline > li:not(:first-child) {
+    margin-left: 10px;
+}

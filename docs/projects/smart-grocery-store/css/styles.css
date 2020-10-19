@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+}
+
+.tab-nav {
+    overflow: hidden;
+    font-family: "Roboto";
+    padding: 10px 20px;
+    margin-left: 300px;
+}
+
+.tab-button {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #eeeeee;
+    padding: 14px 16px;
+    background-color: #131313;
+    font-family: inherit;
+    margin-right: 15px;
+}
+
+.tab-button:hover {
+    background-color: #49b800;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-active {
+    border-bottom: 3px solid #49b800;
+}
+
+.tab-content {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.company-name {
+    font-family: "Roboto";
+    color: #eeeeee;
+    font-size: 75px;
+    text-align: center;
+    padding: none;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+.tab-title {
+    font-family: "Roboto";
+    color: #eeeeee;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.tab-description {
+    font-family: "Roboto";
+    color: #eeeeee;
+    font-size: 30px;
+}
+
+#select-category {
+    font-size: 18px;
+    color: white;
+    background: none;
+    outline: none;
+    border: 2px solid #eeeeee;
+    height: 50px;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+#select-category:focus {
+    border: 2px solid #66ff00;
+    transition: 0.3s;
+}
+
+#select-category option {
+    background-color: #fff3da;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: #eeeeee;
+    font-family: "Roboto";
+    font-size: 12px;
+    background-color: #0a0a0a;
+    padding: 10px 0px 10px 0px;
+}  
+.product-display {
+    font-family: "Roboto";
+    font-size: 18px;
+    color: #eeeeee;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cart-display {
+    font-family: "Roboto";
+    font-size: 18px;
+    color: #eeeeee;
+}
+
+.add-cart-button {
+    font-family: "Roboto";
+    color: #eeeeee;
+    font-size: 18px;
+    border: 2px solid #66ff00;
+    border-radius: 30px;
+    padding: 15px;
+    width: 250px;
+    outline: none;
+    background: none;
+}
+
+.add-cart-button:hover {
+    background-color: #66ff00;
+    color: black; 
+    width: 300px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.page-container {
+    min-height: calc(100vh - 40px); 
+}
+
+.green-text {
+    color: #49b800;
+}
+
+.preference-label {
+    color: #eeeeee;
+    font-size: 25px;
+    font-family: "Roboto";
+}
+
+.preference-checkbox {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 30px;
+}
+
+.preference-checkboxes-container {
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.next-section-button {
+    font-family: "Roboto";
+    color: black;
+    font-size: 18px;
+    background-color: #57da00;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 250px;
+    outline: none;
+}
+
+.next-section-button:hover {
+    background-color: #66ff00;
+    color: black; 
+    width: 300px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.previous-section-button {
+    font-family: "Roboto";
+    color: black;
+    font-size: 18px;
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 250px;
+    outline: none;
+}
+
+.previous-section-button:hover {
+    background-color: #f3f3f3;
+    color: black; 
+    width: 300px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.breadcrumb-list {
+    list-style: none;
+    margin-left: 300px;
+    padding: 0px;
+}
+
+.breadcrumb-item {
+    display: inline;
+    font-size: 18px;
+    color: white;
+    font-family: "Roboto";
+    margin-right: 10px;
+}
+
+.breadcrumb-active {
+    border-bottom: 2px solid #66ff00;
+}
+
+.breadcrumb-button {
+    background: none;
+    border: none;
+    outline: none;
+    color: #eeeeee;
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+.breadcrumb-button:hover {
+    cursor: pointer;
+    color:#66ff00;
+    transition: 0.3s;
+}
+
+#cart-size {
+    display: inline; 
+    font-size: 15px;
+    border-radius: 10px; 
+    background-color: #ff4141;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.product-card {
+    height: 300px;
+    width: 190px;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    margin: 0;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    width: 190px;
+}
+
+.product-card p {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    margin: 1px;
+    color: black;
+}
+
+.product-card:hover {
+    border: 3px solid #00c3ff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.product-card-active {
+    border: 3px solid #66ff00;
+}
+
+.product-card-active:hover {
+    border: 3px solid #ff4141;
+    transition: 0.3s;
+}
+

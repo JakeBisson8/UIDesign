@@ -26,34 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <!-- Stylesheets -->
-    <style>
-        ::selection {
-            background-color: #b388ff;
-        }
-
-        #navigation, #navigation-title{
-            -webkit-transition: all 0.2s ease;
-            -moz-transition: all 0.2s ease;
-            -o-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-        }
-
-        .title-paragraph {
-            font-size: 18px;
-        }
-
-        .description-paragraph {
-            font-size: 16px;
-        }
-
-        .anton-font {
-            font-family: "Anton";
-        }
-
-        .roboto-font {
-            font-family: "Roboto";
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body class="grey lighten-5">
 
@@ -65,7 +38,6 @@
                     <a id="navigation-title" href="#top" class="brand-logo deep-purple-text roboto-font">Jake Bisson</a>
                     <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons black-text">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <!-- <li><a class="deep-purple-text roboto-font" href="#top" style="font-size: 18px;">Home</a></li> -->
                         <li><a class="dropdown-trigger deep-purple-text roboto-font" style="font-size: 18px;" href="#!" data-target="dropdown-projects">Projects<i class="fas fa-angle-down" style="padding-left: 10px; font-size:18px; height: inherit;"></i></a></li>
                         <li><a class="deep-purple-text roboto-font" style="font-size: 18px;" href="#activities">Activities</a></li>
                         <li><a class="deep-purple-text roboto-font" href="#contact" style="font-size: 18px;">Let's Connect</a></li>     
@@ -113,7 +85,7 @@
     <div class="container scrollspy" id="welcome" style="margin-top: 100px; margin-bottom: 100px;">
         <div class="row">
             <div class="col s12 l3">
-                <img src="images/undraw_Hello_qnas.svg" alt="can't Show" class="responsive-image" style="width: 100%; height: 30%;"/>
+                <img src="images/undraw_Hello_qnas.svg" alt="can't Show" class="responsive-image svg-img"/>
             </div>
             <div class="col s12 l8 offset-l1">
                 <h1 class="grey-text text-darken-4 anton-font" style="margin-top: 0px;">Welcome!</h1>
@@ -137,7 +109,7 @@
     <div class="container scrollspy" id="projects" style="margin-top: 100px;"> 
         <div class="row">
             <div class="col s12 l3 push-l9">
-                <img src="images/undraw_Designer_by46.svg" alt="can't Show" class="responsive-image" style="width: 100%; height: 30%;"/>
+                <img src="images/undraw_Designer_by46.svg" alt="can't Show" class="responsive-image svg-img"/>
             </div>
             <div class="col s12 l8 pull-l3">
                 <h1 class="grey-text text-darken-4 anton-font">Projects</h1>
@@ -170,19 +142,19 @@
             </div>
             <div class="col s12 l5 offset-l1">
                 <span id="survey" class="scrollspy" style="font-size:34px;">Apple Website Survey</span>
+                <ul class="list-inline">
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>Bootstrap</li>
+                    <li class="roboto-font technology-paragraph"><i class="fas fa-cog grey-text" style="padding-right: 10px;"></i>ExpressJS</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-node-js green-text" style="padding-right: 10px;"></i>NodeJS</li>
+                </ul>
                 <p class="description-paragraph">
                     Surveys are a common method used by companies to get user feedback on their website's UI/UX. For this project I was required to create a working survey page for a chosen website in a NodeJS environment.
                     This project gave me experience setting up a NodeJS server and using ExpressJS in the backend to handle post requests from form submissions. The front-end was built using 
                     standard html and bootstrap. Since this page runs using a localhost server it can only be viewed by forking the github repository and running it locally.
                 </p>
-                <ul>
-                    <li class="roboto-font description-paragraph"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
-                    <li class="roboto-font description-paragraph"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>Bootstrap</li>
-                    <li class="roboto-font description-paragraph"><i class="fas fa-cog grey-text" style="padding-right: 10px;"></i>ExpressJS</li>
-                    <li class="roboto-font description-paragraph"><i class="fab fa-node-js green-text" style="padding-right: 10px;"></i>NodeJS</li>
-                </ul>
-                <a class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
-                <a href="labs/lab6/outline/online-survey-project-outline.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
+                <a href="projects/apple-survey/index.html" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
+                <a href="projects/apple-survey/outline/apple-survey-requirements.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
             </div>
         </div>
 
@@ -207,17 +179,17 @@
             </div>
             <div class="col s12 pull-l7 l5">
                 <span class="scrollspy" id="grocery" style="font-size:34px;">Online Grocery Store</span>
+                <ul class="list-inline">
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-css3-alt blue-text" style="padding-right: 10px;"></i>CSS</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-js-square yellow-text text-darken-2" style="padding-right: 10px;"></i>JavaScript</li>
+                </ul>
                 <p class="description-paragraph">Navigational patterns and organization of information allows users to easily navigate a webpage and identify where information can be found. This project I was required to create an smart online grocery store using a navigational pattern and organizing the products into categories.
                     The navigational patterns used were the linear (wizard) pattern and breadcrumb pattern to simulate each step in the process of purchasing groceries. The products were sorted by category to allow for better ease of finding products for the users.
                     The store also provided users with the options to specify their dietary needs so they would not be displayed products that are outside their diet's scope. 
                 </p>
-                <ul>
-                    <li class="roboto-font"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
-                    <li class="roboto-font"><i class="fab fa-css3-alt blue-text" style="padding-right: 10px;"></i>CSS</li>
-                    <li class="roboto-font"><i class="fab fa-js-square yellow-text text-darken-2" style="padding-right: 10px;"></i>JavaScript</li>
-                </ul>
-                <a href="labs/lab3/lab3-grocery.html" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
-                <a href="labs/lab3/outline/smart-grocery-store-project-outline.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
+                <a href="projects/smart-grocery-store/index.html" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
+                <a href="projects/smart-grocery-store/outline/smart-grocery-store-project-outline.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
             </div>
         </div>
         
@@ -245,14 +217,14 @@
             </div>
             <div class="col s12 l5 offset-l1">
                 <span class="scrollspy" id="bike" style="font-size:34px;">Bike Service Shop</span>
-                <p class="description-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum in culpa placeat porro veniam amet vel cupiditate nulla excepturi repellat doloremque quas dignissimos, ullam nihil exercitationem architecto nesciunt itaque!</p>
-                <ul>
-                    <li class="roboto-font"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
-                    <li class="roboto-font"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>Bootstrap</li>
-                    <li class="roboto-font"><i class="fas fa-code blue-text" style="padding-right: 10px;"></i>Jquery</li>
+                <ul class="list-inline">
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-html5 red-text" style="padding-right: 10px;"></i>HTML</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>Bootstrap</li>
+                    <li class="roboto-font technology-paragraph"><i class="fas fa-code blue-text" style="padding-right: 10px;"></i>Jquery</li>
                 </ul>
-                <a href="labs/lab5/lab5-bikeshop.html" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
-                <a class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
+                <p class="description-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum in culpa placeat porro veniam amet vel cupiditate nulla excepturi repellat doloremque quas dignissimos, ullam nihil exercitationem architecto nesciunt itaque!</p>
+                <a href="projects/bike-repair-shop/index.html" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
+                <a href="projects/bike-repair-shop/outline/bike-repair-shop-requirements.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
             </div>
         </div>
 
@@ -280,13 +252,13 @@
             </div>
             <div class="col s12 pull-l7 l5">
                 <span class="scrollspy" id="referee" style="font-size:34px;">Referee Academy</span>
-                <p class="description-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum in culpa placeat porro veniam amet vel cupiditate nulla excepturi repellat doloremque quas dignissimos, ullam nihil exercitationem architecto nesciunt itaque!</p>
-                <ul>
-                    <li class="roboto-font description-paragraph"><i class="fab fa-react blue-text text-lighten-2" style="padding-right: 10px;"></i>ReactJS</li>
-                    <li class="roboto-font description-paragraph"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>React Bootstrap</li>
+                <ul class="list-inline">
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-react blue-text text-lighten-2" style="padding-right: 10px;"></i>ReactJS</li>
+                    <li class="roboto-font technology-paragraph"><i class="fab fa-bootstrap purple-text" style="padding-right: 10px;"></i>React Bootstrap</li>
                 </ul>
-                <a class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">View project</a>
-                <a class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
+                <p class="description-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum in culpa placeat porro veniam amet vel cupiditate nulla excepturi repellat doloremque quas dignissimos, ullam nihil exercitationem architecto nesciunt itaque!</p>
+                <a href="#" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">GitHub repository</a>
+                <a href="projects/hockey-referee-academy/outline/hockey-referee-academy-requirements.pdf" target="_blank" class="btn deep-purple lighten-1 white-text z-depth-0 waves-effect waves-light">project outline</a>
             </div>
         </div>
     </div>
@@ -302,7 +274,7 @@
     <div class="container scrollspy" id="activities" style="margin-top: 100px;">
         <div class="row">
             <div class="col s12 l3">
-                <img src="images/undraw_instat_analysis_ajld.svg" alt="can't Show" class="responsive-image" style="width: 100%; height: 30%;"/>
+                <img src="images/undraw_instat_analysis_ajld.svg" alt="can't Show" class="responsive-image svg-img"/>
             </div>
             <div class="col s12 l8 offset-l1">
                 <h1 class="grey-text text-darken-4 anton-font">Activities</h1>
@@ -315,8 +287,8 @@
 
         <div class="row" style="margin-top: 100px;">
             <!-- Personas card -->
-            <div class="col s12 m12 l3">
-                <div class="card" style="border-radius: 20px;">
+            <div class="col s12 m12 l4">
+                <div class="card activity-card">
                     <div class="card-content grey-text text-darken-4">
                         <span class="card-title roboto-font">Personas</span>
                         <p class="description-paragraph">
@@ -325,13 +297,13 @@
                         </p>
                     </div>
                     <div class="card-action grey lighten-5" style="border-radius: 0px 0px 20px 20px;">
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity1/activity1-requirements.pdf" target="_blank">Requirements</a>
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity1/activity1-submission.pdf" target="_blank">Submission</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/personas/personas-requirements.pdf" target="_blank">Requirements</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/personas/personas-submission.pdf" target="_blank">Submission</a>
                     </div>
                 </div>
             </div>
             <!-- Story boards card -->
-            <div class="col s12 m12 l3 push-l1">
+            <div class="col s12 m12 l4">
                 <div class="card" style="border-radius: 20px;">
                     <div class="card-content grey-text text-darken-4">
                         <span class="card-title roboto-font">Storyboards</span>
@@ -341,14 +313,14 @@
                         </p>
                     </div>
                     <div class="card-action grey lighten-5" style="border-radius: 0px 0px 20px 20px;">
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity2/activity2-requirements.pdf" target="_blank">Requirements</a>
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity2/activity2-submission.pdf" target="_blank">Submission</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/storyboards/storyboards-requirements.pdf" target="_blank">Requirements</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/storyboards/storyboards-submission.pdf" target="_blank">Submission</a>
                     </div>
                 </div>
             </div>
             <!-- Knowledge organization card -->
-            <div class="col s12 m12 l3 push-l2">
-                <div class="card" style="border-radius: 20px;">
+            <div class="col s12 m12 l4">
+                <div class="card activity-card">
                     <div class="card-content grey-text text-darken-4">
                         <span class="card-title roboto-font">Knowledge Organization</span>
                         <p class="description-paragraph">
@@ -357,16 +329,16 @@
                         </p>
                     </div>
                     <div class="card-action grey lighten-5" style="border-radius: 0px 0px 20px 20px;">
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity3/activity3-requirements.pdf" target="_blank">Requirements</a>
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity3/activity3-submission.pdf" target="_blank">Submission</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/knowledge-organization/knowledge-organization-requirements.pdf" target="_blank">Requirements</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/knowledge-organization/knowledge-organization-submission.pdf" target="_blank">Submission</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-top: 75px; margin-bottom: 100px;">
+        <div class="row" style="margin-bottom: 100px;">
             <!-- Heuristic Evaluation card -->
-            <div class="col s12 m12 l3 push-l2">
-                <div class="card" style="border-radius: 20px;">
+            <div class="col s12 m12 l4 push-l2">
+                <div class="card activity-card">
                     <div class="card-content grey-text text-darken-4">
                         <span class="card-title roboto-font">Heuristic Evaluation</span>
                         <p class="description-paragraph">
@@ -375,14 +347,14 @@
                         </p>
                     </div>
                     <div class="card-action grey lighten-5" style="border-radius: 0px 0px 20px 20px;">
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity4/activity4-requirements.pdf" target="_blank">Requirements</a>
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity4/activity4-submission.pdf" target="_blank">Submission</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/heuristic-evaluation/heuristic-evaluation-requirements.pdf" target="_blank">Requirements</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/heuristic-evaluation/heuristic-evaluation-submission.pdf" target="_blank">Submission</a>
                     </div>
                 </div>
             </div>
             <!-- Fonts & Colors card -->
-            <div class="col s12 m12 l3 push-l3">
-                <div class="card" style="border-radius: 20px;">
+            <div class="col s12 m12 l4 push-l2">
+                <div class="card activity-card">
                     <div class="card-content grey-text text-darken-4">
                         <span class="card-title roboto-font">Fonts & Colors</span>
                         <p class="description-paragraph">
@@ -391,8 +363,8 @@
                         </p>
                     </div>
                     <div class="card-action grey lighten-5" style="border-radius: 0px 0px 20px 20px;">
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity5/activity5-requirements.pdf" target="_blank">Requirements</a>
-                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/activity5/activtity5-submission.pdf" target="_blank">Submission</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/fonts-and-colors/fonts-and-colors-requirements.pdf" target="_blank">Requirements</a>
+                        <a class="deep-purple-text text-lighten-2 z-depth-0" href="activities/fonts-and-colors/fonts-and-colors-submission.pdf" target="_blank">Submission</a>
                     </div>
                 </div>
             </div>
@@ -411,7 +383,7 @@
     <div class="container scrollspy" id="contact">
         <div class="row">
             <div class="col s12 l4 push-l9">
-                <img src="images/undraw_connected_8wvi.svg" alt="can't Show" class="responsive-image" style="width: 100%; height: 30%;"/>
+                <img src="images/undraw_connected_8wvi.svg" alt="can't Show" class="responsive-image svg-img"/>
             </div>
             <div class="col s12 l6 pull-l3">
                 <h1 class="grey-text text-darken-4 anton-font" style="margin-bottom: 35px;">Let's Connect</h1>
@@ -425,13 +397,11 @@
     </div>
 
     <!-- footer section -->
-    <footer>
-        <div class="footer-copyright grey darken-4 grey-text text-lighten-4" style="padding: 20px 0 20px 0; margin-top: 50px;">
-            <div class="container center-align">
-                Website designed & developed by Jake Bisson 2020
-            </div>
+    <div class="footer-copyright grey darken-4 grey-text text-lighten-4 footer">
+        <div class="container center-align">
+            Website designed & developed by Jake Bisson 2020
         </div>
-    </footer>
+    </div>
     
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Title -->
+        <title>Lab 5 | Bike Shop</title>
+
+        <!-- Meta data -->
+        <meta name="author" content="Jake Bisson"/>
+        <meta name="description" content="Jake Bisson's website containing his assignments and labs for the SEG3125 course."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/styles.css"/>
+        <!-- Icons -->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        <!--Jquery UI -->
+        <link href="https://code.jquery.com/ui/1.12.1/themes/flick/jquery-ui.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+        <a style="text-align: left; color: dodgerblue; font-family: Roboto; font-size: 18px; display: block;" href="../../index.html">Back to home page</a>
+        <!-- Lab 4 Starts Here-->
+        <nav class="navbar navbar-expand-sm navbar-light sticky-top bg-light">
+            <a class="navbar-brand" href="#home">The Bike Shop</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active mx-3" href="#home"><i class="fas fa-home mx-1"></i>Home</a>
+                    <a class="nav-item nav-link mx-3" href="#services"><i class="fas fa-bicycle mx-1"></i>Services</a>
+                    <a class="nav-item nav-link mx-3" href=#about><i class="fas fa-info-circle mx-1"></i>About</a>
+                    <a class="nav-item nav-link mx-3" href="#team"><i class="fas fa-users mx-1"></i>Team</a>
+                    <a class="nav-item nav-link mx-3" href="#contact"><i class="fas fa-comment-alt mx-1"></i>Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main page image -->
+        <div class="background-main">
+            <div class="container-fluid title-container text-center">
+                <h1 class="display-2"><strong>The Bike Shop</strong></h1>
+            </div>
+        </div>
+
+        <!-- Services container -->
+        <div class="container py-5 text-center" id="services">
+            <p class="display-4 text-center"><strong><i class="fas fa-bicycle mx-1"></i>Services</strong></p> 
+            <hr/>
+            <button type="button" class="btn btn-primary btn-lg w-50 my-3 py-4" data-toggle="modal" data-target="#serviceModal">Book Service</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg py-4  d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/full-service.jpg" height="300" width="300"/>
+                        <br/>
+                        <h5 class="card-title text-center">Full Service</h5>
+                        <p class="lead text-center">$129.99</p>
+                        <ul class="list-group text-center list-group-flush">
+                            <li class="list-group-item">Brake Service</li>
+                            <li class="list-group-item">Tire Service</li>
+                            <li class="list-group-item">Full Inspection</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/wheel-service.jpg" height="300" width="300"/>
+                        <br/>
+                        <h5 class="card-title text-center">Tire Service</h5>
+                        <p class="lead text-center">$29.99</p>
+                        <ul class="list-group text-center list-group-flush">
+                            <li class="list-group-item">Puncture maintenance</li>
+                            <li class="list-group-item">Air Refill</li>
+                            <li class="list-group-item">Balancing</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/brake-service.jpg" height="300" width="300"/>
+                        <br/>
+                        <h5 class="card-title text-center">Brake Service</h5>
+                        <p class="lead text-center">$49.99</p>
+                        <ul class="list-group text-center list-group-flush">
+                            <li class="list-group-item">Part Replacement</li>
+                            <li class="list-group-item">Cable Adjustment</li>
+                            <li class="list-group-item">Professional Test</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal All Services (with service selection) -->
+        <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="servicemodallabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="fullservicemodallabel">Book Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="w-100" action="#home">
+                            <p class="lead"><strong>Your Information</strong></p>
+                            <div class="form-group">
+                                <input type="text" class="form-control my-2" id="nameInput" placeholder="Enter your full name" required/>
+                                <input type="email" class="form-control my-2" id="emailInput" placeholder="Enter your email (example@email.com)" pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required/>
+                                <input type="tel" class="form-control my-2" id="telephoneInput" placeholder="Enter your phone number" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required/>
+                            </div>
+                            <p class="lead"><strong>Service Details</strong></p>
+                            <div class="form-group">
+                                <select id="service" class="w-100 form-control" placeholder="Select service" onchange="updateCost()" required>
+                                    <option value="" selected disabled hidden>Select service</option>
+                                    <option value="0">Full Service ($129.99)</option>
+                                    <option value="1">Tire Service ($29.99)</option>
+                                    <option value="2">Brake Service ($49.99)</option>
+                                </select>
+                                <select id="professional" class="w-100 form-control my-2" placeholder="Select professional" onchange="setUnavailableDates()" required>
+                                    <option value="" selected disabled hidden>Select professional</option>
+                                    <option value="0">Dom Toretto (full service professional)</option>
+                                    <option value="1">Roman Pearce (full service professional)</option>
+                                    <option value="2">Luke Hobbs (tire service professional)</option>
+                                    <option value="3">Han Seoul-Oh (tire service professional)</option>
+                                    <option value="4">Brian O'Conner (break service professional)</option>
+                                    <option value="5">Tej Parker (break service professional)</option>
+                                </select>
+                                <input class="w-100 form-control my-2" placeholder="Enter service date" type="text" id="dateInput" autocomplete="off" required/>
+                                <input type="text" placeholder="Enter service time" onfocus="(this.type = 'time')" onblur="(this.type= 'text')" class="w-100 form-control my-2" id="timeInput" required/>
+                            </div>
+                            <p class="lead"><strong>Payment</strong></p>
+                            <div class="form-group">
+                                <span id="subtotal">Subtotal:</span><br/>
+                                <span id="HST">HST:</span><br/>
+                                <span id="total"><strong>Total:</strong></p></span>
+                                <p class="text-secondary"><small><em>* $10.00 will be charged if a service is cancelled within 24 hours</em></small></p>
+                                <input type="text" class="form-control my-2" id="cardInput" placeholder="Credit Card Number (xxxx xxxx xxxx xxxx)" pattern="^[0-9]{4}[ -.][0-9]{4}[ -.][0-9]{4}[ -.][0-9]{4}$" data-toggle="tooltip" data-placement="right" title="Credit card number is required if service is cancelled within 24 hours" autocomplete="off" required/>
+                                <p class="text-right" style="font-size: 30px;"><i class="fab fa-cc-visa mx-2"></i><i class="fab fa-cc-mastercard"></i></p>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 p-3">Book Service</button>
+                            <button type="button" class="btn btn-secondary btn-lg w-100 mt-2" data-dismiss="modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--about container-->
+        <div class="container py-5" id="about">
+            <p class="display-4 text-center"><strong><i class="fas fa-info-circle mx-1"></i>About Us</strong></p>
+            <hr/>
+            <p class="lead text-center w-75 mx-auto my-5 border border-top-0 border-bottom-0 border-secondary" style="background-color: lightgray;"><strong>The Bike Shop is the #1 location for bike service in downtown Ottawa.</strong></p>
+            <p class="w-75 mx-auto px-5 mb-4">We are a group of highly trained professionals with generations of service experience.
+                We believe in quality and at The Bike Shop you should expect nothing less. At The Bike Shop everyone is family, even our customers, and we provide family 
+                with the best in class service for an affordable price.<br/><br/></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg text-center d-flex flex-column">
+                        <p class="lead"><strong>Location</strong></p>
+                        <i class="fas fa-map-marker-alt mx-auto my-3 text-secondary" style="font-size: 100px;"></i>
+                        <a href="https://www.google.ca/maps/dir//uOttawa+Rideau+Residence,+290+Rideau+St,+Ottawa,+ON+K1N+5Y3/@45.4286008,-75.6861243,17.46z/data=!4m16!1m6!3m5!1s0x4cce0504837dd07f:0x2d3e0927c3281d9b!2suOttawa+Rideau+Residence!8m2!3d45.4283599!4d-75.685943!4m8!1m0!1m5!1m1!1s0x4cce0504837dd07f:0x2d3e0927c3281d9b!2m2!1d-75.685943!2d45.4283598!3e3" class="btn btn-lg btn-primary my-4" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Address</th>
+                                    <td>290 Rideau Street, Ottawa ON</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Postal Code</th>
+                                    <td>K1N 5Y3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg text-center">
+                        <p class="lead"><strong>Hours of Operation</strong></p>
+                        <i class="fas fa-clock mx-auto my-3 text-secondary" style="font-size: 100px;"></i>
+                        <table class="table mt-4">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Saturday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Sunday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Monday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tuesday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Wednesday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Thursday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Friday</th>
+                                        <td>8:00am-10:00pm</td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg text-center d-flex flex-column">
+                        <p class="lead"><strong>Contact</strong></p>
+                        <i class="fas fa-address-book mx-auto my-3 text-secondary" style="font-size: 100px;"></i>
+                        <a href="#contact" class="btn btn-primary btn-lg my-4">Contact Us</a>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Phone</th>
+                                    <td>(123)-456-7890</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Email</th>
+                                    <td>thebikeshop@bikes.com</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Instagram</th>
+                                    <td>@TheBikeShopOttawa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Twitter</th>
+                                    <td>@TheBikeShopOttawa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Container -->
+        <div class="container py-5" id="team">
+            <p class="display-4 text-center"><strong><i class="fas fa-users mx-3"></i>The Team</strong></p>
+            <hr/>
+            <div class="container">
+                <p class="lead text-center w-75 mx-auto mt-5 border border-top-0 border-left-0 border-right-0 border-secondary" style="font-size: 23px;"><strong>Full service professionals</strong></p>
+                <div class="row w-75 mx-auto">
+                    <div class="col-sm py-4  d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/dom.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Dom Toretto</h5>
+                        <p class="card-text">Hi, I'm Dom.<br/> I run the shop and I believe in family first and living life a quarter mile at a time.</p>
+                        <p class="card-text text-center"><strong>Specialty: Full Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Dom</a>
+                    </div>
+                    <div class="col-sm py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/roman.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Roman Pearce</h5>
+                        <p class="card-text">Hi I'm Roman.<br/>I'll do anything as long as its with my team and snacks are involved</p>
+                        <p class="card-text text-center"><strong>Specialty: Full Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Roman</a>
+                    </div>
+                </div>
+                <p class="lead text-center w-75 mx-auto mt-5 border border-top-0 border-left-0 border-right-0 border-secondary" style="font-size: 23px;"><strong>Tire service professionals</strong></p>
+                <div class="row w-75 mx-auto ">
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/hobbs.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Luke Hobbs</h5>
+                        <p class="card-text">Hi, I'm Luke.<br/>I believe in doing what is right even if it may seem wrong.</p>
+                        <p class="card-text text-center"><strong>Specialty: Tire Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Luke</a>
+                    </div>
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/han.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Han Seoul-Oh</h5>
+                        <p class="card-text">Hi I'm Han.<br/>I believe in living your life to the fullest cause you don't know when it will end.</p>
+                        <p class="card-text text-center"><strong>Specialty: Tire Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Han</a>
+                    </div>
+                </div>
+                <p class="lead text-center w-75 mx-auto mt-5 border border-top-0 border-left-0 border-right-0 border-secondary" style="font-size: 23px;"><strong>Brake service professionals</strong></p>
+                <div class="row w-75 mx-auto">
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/brian.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Brian O'Conner</h5>
+                        <p class="card-text">Hi I'm Brian.<br/> I believe that everyone deserves a little respect and friends are all you need.<br/></p>
+                        <p class="card-text text-center"><strong>Specialty: Brake Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Brian</a>
+                    </div>
+                    <div class="col-lg py-4 d-flex flex-column">
+                        <img class="mx-auto rounded" src="images/tej.PNG" height="250" width="250"/>
+                        <br/>
+                        <h5 class="card-title text-center">Tej Parker</h5>
+                        <p class="card-text">Hi I'm Tej.<br/> I believe in working hard even when nobody is watching</p>
+                        <p class="card-text text-center"><strong>Specialty: Brake Services</strong></p>
+                        <a href="#" class="btn btn-primary btn-lg mt-auto">Connect with Tej</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!--Contact us container-->
+        <div class="container py-5" id="contact">
+            <p class="display-4 text-center"><strong><i class="fas fa-comment-alt mx-3"></i>Contact Us</strong></p>
+            <hr/>
+            <form class="w-50 mx-auto">
+                <div class="form-group">
+                    <label for="nameInput">Your Name</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required/>
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email Address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (example@email.com)" pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required/>
+                </div>
+                <div class="form-group">
+                    <label for="messageInput">Your Message</label>
+                    <textarea class="form-control" id="messageInput" rows="10" cols="50" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100 p-3">Send Message</button>
+            </form>
+        </div>
+        <!-- footer div -->
+        <div class="container-fluid text-center">
+            Website designed & developed by Jake Bisson
+        </div>
+    </body>
+</html>
